@@ -22,7 +22,7 @@ function dateSample(sampleActivity) {
   if (typeof sampleActivity === 'string' && !isNaN(parseInt(sampleActivity)) &&  +sampleActivity < MODERN_ACTIVITY && +sampleActivity > 0) {
     let k = parseFloat('0.693')/HALF_LIFE_PERIOD;
     let sample = sampleActivity.includes('.') ? parseFloat(sampleActivity) : parseInt(sampleActivity)
-    let res = (Math.log(15/sample))/k;
+    let res = (Math.log(MODERN_ACTIVITY/sample))/k;
     val = Math.ceil(res)
   }
   return val
