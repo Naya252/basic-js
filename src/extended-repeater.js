@@ -24,18 +24,12 @@ function repeater(str, options) {
   
   let val = buildString(`${str}${addition}`, options.repeatTimes, options.separator);
 
-  console.log(val)
-
   function buildString(val = '', max = 0, separator = '+'){
     let idx = 1;
-    console.log(val)
-    console.log(max)
-    console.log(separator)
     let res = [val]
     while(idx < max){
       idx++;
       res.push(val);
-      console.log(res)
     }
     res = res.join(`${separator}`);
     return res;
