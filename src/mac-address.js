@@ -19,17 +19,13 @@ function isMAC48Address(n) {
 
   if(typeof n === 'string' && n.includes('-')){
     let arr = n.split('-');
-    console.log(arr);
     if(arr.length === 6) {
       str = arr.join('').split('');
-      console.log(str);
       if(str.every(el => ((el.charCodeAt(0) >= 48 && el.charCodeAt(0) <= 57) || (el.charCodeAt(0) >= 65 && el.charCodeAt(0) <= 70)))) {
-        console.log('tr')
         val = true
       }
     }
   } 
-  console.log(val)
   return val
 }
 

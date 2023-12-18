@@ -51,7 +51,6 @@ function getDNSStats(domains) {
       })
       data = data.filter(el => el.length);
 
-      console.log(data);
       checkDomains(data);
     }
   }

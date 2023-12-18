@@ -18,12 +18,10 @@ function countCats(matrix) {
   let count = 0;
   if(matrix.length){
     matrix.forEach(row => {
-      console.log(row)
       let cats = row.filter(el => el === '^^');
       count += cats.length
     })
   }
-  console.log(count)
   return count;
 }
 
