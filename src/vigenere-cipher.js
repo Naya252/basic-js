@@ -20,8 +20,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 class VigenereCipheringMachine {
-  constructor(){
-    this.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  constructor(val){
+    this.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    this.side = val;
   }
 
   toArr(val){
@@ -120,7 +121,17 @@ class VigenereCipheringMachine {
       }      
     })
 
+    res = this.checkSide(res);
+
     return res.join('');
+  }
+
+  checkSide(res) {
+    if(this.side === false){
+      return res.reverse()
+    } else {
+      return res
+    }
   }
 
   encrypt(val, key) {
