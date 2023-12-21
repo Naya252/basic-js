@@ -52,7 +52,7 @@ function transform(arr) {
           }
         });
 
-        val = newMyArr.filter(element => typeof element !== 'string');
+        val = newMyArr.filter(element => element !== 'isDelete' && element !== '--discard-prev' && element !== '--double-prev' && element !== '--double-next' && element !== '--discard-next');
       }
     } 
 
