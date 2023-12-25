@@ -26,15 +26,16 @@ function deleteDigit(n) {
       let arr = string.split('');
       if(arr[0] < arr[1]){
         arr[0] = '';
+      } else if (arr[0] > arr[1]){
+        arr[1] = '';
       } else if(arr[arr.length - 1] > arr[arr.length - 2]) {
         arr[arr.length - 2] = ''
-      }
+      } 
 
       res = Number(arr.join(''))
 
     }
   }
-
 
   return res
 }
